@@ -4,21 +4,21 @@ import { toast } from 'react-toastify';
 
 const List = (props) => {
 
-    const {thoughts, setthoughts} = props;
+    const {notes, setnotes} = props;
 
     const deleteHandler = (ind)=>{
-        const thought = [...thoughts];
-        thought.splice(ind, 1);
-        setthoughts([...thought]);
-        localStorage.setItem('thoughts', JSON.stringify(thought));
-        toast.warn('Thought deleted successfully')
+        const notes = [...notes];
+        notes.splice(ind, 1);
+        setnotes([...notes]);
+        localStorage.setItem('notes', JSON.stringify(notes));
+        toast.warn('Notes deleted successfully')
     }
   return (
     <>
     
     <ol className='flex whitespace-wrap flex-wrap '>
         <h1>Your Thoughts</h1>
-        {thoughts.map((th, ind)=>{
+        {notes.map((th, ind)=>{
             return <li key={ind} className='inline-block' >
             <div className="container mx-4 my-4">
   

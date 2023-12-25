@@ -7,33 +7,33 @@ const Edit = (props) => {
 
     const navigate = useNavigate()
     const {id} = useParams()
-    const {thoughts, setthoughts} = props;
+    const {notes, setnotes} = props;
     const [title, settitle] = useState('');
     const [description, setdescription] = useState('');
-    const ThoughtIndex = thoughts.findIndex((u)=>u.title == id);
+    const notesIndex = notes.findIndex((u)=>u.title == id);
 
-    const [newthought, setnewthought] =  useState({
-        title:thoughts[ThoughtIndex].title,
-        description:thoughts[ThoughtIndex].description
+    const [newnotes, setnewnotes] =  useState({
+        title:notes[notesIndex].title,
+        description:notes[notesIndex].description
     })
     const ChangeHandler = (e)=>{
-        const copyThought = {...newthought};
-        copyThought[e.target.name] = e.target.value;
-        setnewthought(copyThought);
+        const copynotes = {...newnotes};
+        copynotes[e.target.name] = e.target.value;
+        setnewnotes(copyThought);
     }
 
     const sumbitHandler = (e)=>{
         e.preventDefault();
 
-        const editThought = {title:newthought.title, description:newthought.description}
+        const editnotes = {title:newnotes.title, description:newnotes.description}
 
-        if(newthought.title.trim().length < 4 || newthought.description.trim().length < 4){
+        if(newnotes.title.trim().length < 4 || newnotes.description.trim().length < 4){
             toast.error('Title and description must have min-mum 4 character');
         } else{
-            const nthought = [...thoughts];
-            nthought[ThoughtIndex] = editThought
-            setthoughts(nthought);
-            localStorage.setItem('thoughts', JSON.stringify(nthought))
+            const nnotes = [...notes];
+            nnotes[notesIndex] = editnotes
+            setnotes(nnotes);
+            localStorage.setItem('notes', JSON.stringify(nnotes))
             toast.success('Thoughts updated successfully');
             navigate('/list')
         }
@@ -45,11 +45,11 @@ const Edit = (props) => {
   <h2>Update Your Thought</h2>
   <form onSubmit={sumbitHandler}>
     <div className="user-box">
-      <input name='title' type="text"  required="" onChange={ChangeHandler} value={newthought.title}/>
+      <input name='title' type="text"  required="" onChange={ChangeHandler} value={newnotes.title}/>
       <label>Title</label>
     </div>
     <div className="user-box">
-      <input name='description' type="text"  required="" onChange={ChangeHandler} value={newthought.description}/>
+      <input name='description' type="text"  required="" onChange={ChangeHandler} value={newnotes.description}/>
       <label>Description</label>
     </div>
     <button >

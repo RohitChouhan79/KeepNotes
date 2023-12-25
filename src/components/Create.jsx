@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 const Create = (props) => {
 
     const navigate = useNavigate()
-    const {thoughts, setthoughts} = props;
+    const {notes, setnotes} = props;
     const [title, settitle] = useState('');
     const [description, setdescription] = useState('');
 
@@ -15,11 +15,11 @@ const Create = (props) => {
         if(title.trim().length < 4 || description.trim().length < 4){
             toast.error('Title and description must have min-mum 4 character');
         } else{
-            const newthought = {title, description};
-            const tho = [...thoughts, newthought]
-            setthoughts(tho);
-            localStorage.setItem('thoughts', JSON.stringify(tho))
-            toast.success('Thoughts saved successfully');
+            const newnotes = {title, description};
+            const not = [...notes, newnotes]
+            setthoughts(not);
+            localStorage.setItem('notes', JSON.stringify(not))
+            toast.success('Notes saved successfully');
             setdescription('');
             settitle('');
             navigate('/list')

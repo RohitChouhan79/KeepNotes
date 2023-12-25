@@ -10,7 +10,7 @@ import Home from './components/Home'
 
 
 const App = () => {
-  const [thoughts, setthoughts] = useState(JSON.parse(localStorage.getItem('thoughts')) || [])
+  const [notes, setnotes] = useState(JSON.parse(localStorage.getItem('notes')) || [])
   return (
     <>
     <div className='flex flex-col relative justify-start gap-5 h-[100vh]'>
@@ -19,10 +19,10 @@ const App = () => {
 
     <Routes>
       {/* <Route path="/"/>  */}
-      <Route path="/" element={<Home thoughts={thoughts} setthoughts={setthoughts}/>}/> 
-      <Route path="/create" element={<Create thoughts={thoughts} setthoughts={setthoughts}/>}/> 
-      <Route path="/list" element={<List thoughts={thoughts} setthoughts={setthoughts}/>}/> 
-      <Route path="/list/edit/:id" element={<Edit thoughts={thoughts} setthoughts={setthoughts}/>}/> 
+      <Route path="/" element={<Home notes={notes} setnotes={setnotes}/>}/> 
+      <Route path="/create" element={<Create notes={notes} setnotes={setnotes}/>}/> 
+      <Route path="/list" element={<List notes={notes} setnotes={setnotes}/>}/> 
+      <Route path="/list/edit/:id" element={<Edit notes={notes} setthoughts={setnotes}/>}/> 
 
     </Routes>
     </div>
