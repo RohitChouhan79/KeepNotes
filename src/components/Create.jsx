@@ -17,7 +17,7 @@ const Create = (props) => {
         } else{
             const newnotes = {title, description};
             const not = [...notes, newnotes]
-            setthoughts(not);
+            setnotes(not);
             localStorage.setItem('notes', JSON.stringify(not))
             toast.success('Notes saved successfully');
             setdescription('');
@@ -29,7 +29,7 @@ const Create = (props) => {
   return (
     <>
     <div className="login-box">
-  <h2>Write Your Thought</h2>
+  <h2>Write Your Notes </h2>
   <form onSubmit={sumbitHandler}>
     <div className="user-box">
       <input type="text"  required="" onChange={(e)=>{settitle(e.target.value)} } value={title}/>

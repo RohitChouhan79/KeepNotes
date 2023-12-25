@@ -10,7 +10,7 @@
 }
 
 body {
-  background: #5b37b7;
+  background: #d3ea77;
   color: #010101;
   min-height: 100vh;
   display: grid;
@@ -37,7 +37,7 @@ a {
   border-radius: 30px;
   position: relative;
   --hover-bg: #5b37b720;
-  --hover-c: #5b37b7;
+  --hover-c: #f22404;
 }
 
 a svg {
@@ -114,15 +114,17 @@ a.active span {
   top: 50%;
   left: 50%;
   width: 400px;
+  color: white;
   padding: 40px;
   transform: translate(-50%, -50%);
-  background: rgba(0,0,0,.7);
+  background: rgba(62, 52, 210, 0.7);
   box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.552);
   border-radius: 10px;
 }
 
 .login-box h2 {
+  font-size: 22px;
   margin: 0 0 30px;
   padding: 0;
   color: #fff;
@@ -159,7 +161,7 @@ a.active span {
 .login-box .user-box input:valid ~ label {
   top: -20px;
   left: 0;
-  color: #5B37B7;
+  color: #fff;
   font-size: 12px;
 }
 
@@ -167,8 +169,8 @@ a.active span {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
-  color: #5B37B7;
-  font-size: 16px;
+  color: black;
+  font-size: 20px;
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
@@ -178,13 +180,13 @@ a.active span {
 }
 
 .login-box button:hover {
-  background: #5B37B7;
+  background: black;
   color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 5px #5B37B7,
-              0 0 25px #5B37B7,
-              0 0 50px #5B37B7,
-              0 0 100px #5B37B7;
+  box-shadow: 0 0 5px black,
+              0 0 25px black,
+              0 0 50px black,
+              0 0 100px black;
 }
 
 .login-box button span {
@@ -197,7 +199,7 @@ a.active span {
   left: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #5B37B7);
+  background: linear-gradient(90deg, transparent, black);
   animation: btn-anim1 1s linear infinite;
 }
 
@@ -215,7 +217,7 @@ a.active span {
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(180deg, transparent, #5B37B7);
+  background: linear-gradient(180deg, transparent, black);
   animation: btn-anim2 1s linear infinite;
   animation-delay: .25s
 }
@@ -234,7 +236,7 @@ a.active span {
   right: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg, transparent, #5B37B7);
+  background: linear-gradient(270deg, transparent, black);
   animation: btn-anim3 1s linear infinite;
   animation-delay: .5s
 }
@@ -253,7 +255,7 @@ a.active span {
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(360deg, transparent, #5B37B7);
+  background: linear-gradient(360deg, transparent, black);
   animation: btn-anim4 1s linear infinite;
   animation-delay: .75s
 }
