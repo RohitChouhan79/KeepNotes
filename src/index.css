@@ -10,7 +10,7 @@
 }
 
 body {
-  background: #d3ea77;
+  background: #492bf2e0;
   color: #010101;
   min-height: 100vh;
   display: grid;
@@ -21,7 +21,7 @@ body {
 
 nav {
   display: flex;
-  background: #fff;
+  background: rgba(243, 236, 108, 0.662);
   padding: 2rem 3.15rem;
   border-radius: 0 0 30px 30px;
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
@@ -114,10 +114,10 @@ a.active span {
   top: 50%;
   left: 50%;
   width: 400px;
-  color: white;
+  color: black;
   padding: 40px;
   transform: translate(-50%, -50%);
-  background: rgba(62, 52, 210, 0.7);
+  background: #86EFAC;
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.552);
   border-radius: 10px;
@@ -127,7 +127,7 @@ a.active span {
   font-size: 22px;
   margin: 0 0 30px;
   padding: 0;
-  color: #fff;
+  color: black;
   text-align: center;
 }
 
@@ -139,10 +139,10 @@ a.active span {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
-  color: #fff;
+  color: black;
   margin-bottom: 30px;
   border: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid black;
   outline: none;
   background: transparent;
 }
@@ -152,7 +152,7 @@ a.active span {
   left: 0;
   padding: 10px 0;
   font-size: 16px;
-  color: #fff;
+  color: black;
   pointer-events: none;
   transition: .5s;
 }
@@ -161,7 +161,7 @@ a.active span {
 .login-box .user-box input:valid ~ label {
   top: -20px;
   left: 0;
-  color: #fff;
+  color: black;
   font-size: 12px;
 }
 

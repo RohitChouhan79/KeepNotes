@@ -42,7 +42,7 @@ const Edit = (props) => {
   return (
     <>
     <div className="login-box">
-  <h2>Update Your Thought</h2>
+  <h2>Update Your Notes</h2>
   <form onSubmit={sumbitHandler}>
     <div className="user-box">
       <input name='title' type="text"  required="" onChange={ChangeHandler} value={newnotes.title}/>

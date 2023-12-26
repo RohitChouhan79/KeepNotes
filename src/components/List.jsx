@@ -17,7 +17,7 @@ const List = (props) => {
     <>
     
     <ol className='flex whitespace-wrap flex-wrap '>
-        <h1>Your Thoughts</h1>
+        <h1>Your Notes</h1>
         {notes.map((th, ind)=>{
             return <li key={ind} className='inline-block' >
             <div className="container mx-4 my-4">
