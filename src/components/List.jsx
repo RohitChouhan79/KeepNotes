@@ -7,9 +7,9 @@ const List = (props) => {
     const {notes, setnotes} = props;
 
     const deleteHandler = (ind)=>{
-        const notes = [...notes];
-        notes.splice(ind, 1);
-        setnotes([...notes]);
+        const copynotes = [...notes];
+        copynotes.splice(ind, 1);
+        setnotes(copynotes);
         localStorage.setItem('notes', JSON.stringify(notes));
         toast.warn('Notes deleted successfully')
     }

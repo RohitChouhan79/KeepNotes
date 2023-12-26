@@ -22,7 +22,7 @@ const App = () => {
       <Route path="/" element={<Home notes={notes} setnotes={setnotes}/>}/> 
       <Route path="/create" element={<Create notes={notes} setnotes={setnotes}/>}/> 
       <Route path="/list" element={<List notes={notes} setnotes={setnotes}/>}/> 
-      <Route path="/list/edit/:id" element={<Edit notes={notes} setthoughts={setnotes}/>}/> 
+      <Route path="/list/edit/:id" element={<Edit notes={notes} setnotes={setnotes}/>}/> 
 
     </Routes>
     </div>

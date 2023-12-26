@@ -19,7 +19,7 @@ const Edit = (props) => {
     const ChangeHandler = (e)=>{
         const copynotes = {...newnotes};
         copynotes[e.target.name] = e.target.value;
-        setnewnotes(copyThought);
+        setnewnotes(copynotes);
     }
 
     const sumbitHandler = (e)=>{
