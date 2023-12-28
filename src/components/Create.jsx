@@ -32,11 +32,11 @@ const Create = (props) => {
   <h2>Write Your Notes </h2>
   <form onSubmit={sumbitHandler}>
     <div className="user-box">
-      <input type="text"  required="" onChange={(e)=>{settitle(e.target.value)} } value={title}/>
+      <input type="text"  required=""  onChange={(e)=>{settitle(e.target.value)} } value={title}  />
       <label>Title</label>
     </div>
     <div className="user-box">
-      <input type="text"  required="" onChange={(e)=>{setdescription(e.target.value)}} value={description}/>
+      <input type="text"  required="" onChange={(e)=>{setdescription(e.target.value)}} value={description}  />
       <label>Description</label>
     </div>
     <button >
